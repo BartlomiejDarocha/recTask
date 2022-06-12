@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl:'http://localhost:3000/'
-  // json-server --watch products.json --routes routes.json --delay 500
+  // json-server --watch mock_products/products.json --routes mock_products/routes.json --delay 500
 };
 
 /*
