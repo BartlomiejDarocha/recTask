@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Product } from 'src/app/models/product.model';
 import { ApiService } from 'src/app/services/api/api.service';
 import { AddProductModalComponent } from '../components/add-product-modal/add-product-modal.component';
+import { DeleteProductModalComponent } from '../components/delete-product-modal/delete-product-modal.component';
 
 @Injectable()
 export class AdminService {
@@ -28,7 +29,7 @@ export class AdminService {
     });
   }
 
-  public deleteProduct(product: Product): Observable<any> {
+  private deleteProduct(product: Product): Observable<any> {
     return this.apiService.delete(`products/${product.id}`);
   }
 
@@ -55,7 +56,7 @@ export class AdminService {
   }
 
   public openDeleteModal(product: Product): void {
-    const modalRef = this.dialog.open(AddProductModalComponent, {
+    const modalRef = this.dialog.open(DeleteProductModalComponent, {
       data: product,
     });
 

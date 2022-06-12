@@ -11,6 +11,6 @@
   </div>
   <div mat-dialog-actions>
     <button mat-button type="button" (click)="onNoClick()">Nie</button>
-    <button mat-button type="submit" [disabled]="productDeleteForm.invalid" [mat-dialog-close]="product">Tak</button>
+    <button mat-button type="submit" [disabled]="!agreeToDelete" [mat-dialog-close]="product">Tak</button>
   </div>
 </form>

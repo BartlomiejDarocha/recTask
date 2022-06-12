@@ -49,6 +49,6 @@ export class AdminComponent implements OnInit {
   }
 
   public deleteProduct(product: Product): void {
-    this.adminService.deleteProduct({...product});
+    this.adminService.openDeleteModal({...product});
   }
 }
