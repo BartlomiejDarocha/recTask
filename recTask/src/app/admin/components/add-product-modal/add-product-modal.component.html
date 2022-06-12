@@ -1,19 +1,46 @@
-<h1 mat-dialog-title>Dodaj produkt</h1>
-<form #productForm="ngForm" (submit)="save()" class="example-form">
+<h1 mat-dialog-title [innerText]="product.id ? 'Edytuj produkt' : 'Dodaj produkt'"></h1>
+<form #productForm="ngForm" class="example-form">
   <div mat-dialog-content>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nazwa</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
+      <input matInput [(ngModel)]="product.name" name="name" required>
     </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Url zdjęcia</mat-label>
+      <input matInput [(ngModel)]="product.imgUrl" name="imgUrl" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Wybierz typ</mat-label>
+      <mat-select [(ngModel)]="product.type" name="type" required>
+        <mat-option *ngFor="let type of productTypes" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>Ceny produktu</div>
+    <div *ngFor="let price of product.price let i=index">
+      <mat-form-field  class="example-full-width" appearance="fill">
+        <mat-label>Wariant</mat-label>
+        <input matInput [(ngModel)]="price.variant" [name]="'variant' + i" required>
+      </mat-form-field>
+      <mat-form-field  class="example-full-width" appearance="fill">
+        <mat-label>Warotść</mat-label>
+        <input matInput type="number" [(ngModel)]="price.value" [name]="'value' + i" required>
+      </mat-form-field>
+      <button mat-button *ngIf="i > 0" type="button" (click)="removePrice(i)">Usuń cenę</button>
+      <button mat-button type="button" (click)="addPricea()">Dodaj cenę</button>
+    </div>
   
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      <mat-label>Opis produktu</mat-label>
+      <textarea matInput [(ngModel)]="product.desc" name="desc" required></textarea>
     </mat-form-field>
+
   </div>
   <div mat-dialog-actions>
     <button mat-button type="button" (click)="onNoClick()">Anuluj</button>
-    <button mat-button type="submit" [mat-dialog-close]="data" cdkFocusInitial>Zapisz</button>
+    <button mat-button type="submit" [disabled]="productForm.invalid" [mat-dialog-close]="product" >Zapisz</button>
   </div>
 </form>
 

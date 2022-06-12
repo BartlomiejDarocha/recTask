@@ -5,24 +5,39 @@
       "name": "Buty 1",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
       "imgUrl": "",
-      "type": "boots",
-      "price": "[]"
+      "type": "buty",
+      "price": [
+        {
+          "variant": "wariant 1", 
+          "value": "0"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Buty 2",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
       "imgUrl": "",
-      "type": "boots",
-      "price": "[]"
+      "type": "buty",
+      "price": [
+        {
+          "variant": "wariant 1", 
+          "value": "0"
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Buty 3",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
       "imgUrl": "",
-      "type": "boots",
-      "price": "[]"
+      "type": "buty",
+      "price": [
+        {
+          "variant": "wariant 1", 
+          "value": "0"
+        }
+      ]
     }
   ]
 }

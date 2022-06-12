@@ -8,22 +8,27 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./add-product-modal.component.scss']
 })
 export class AddProductModalComponent implements OnInit {
+  public productTypes = [ 'namioty' , 'kurtki', 'buty']; 
 
   constructor(
     public dialogRef: MatDialogRef<AddProductModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Product,
+    @Inject(MAT_DIALOG_DATA) public product: Product,
   ) {}
 
   ngOnInit(): void {
-    console.log(this.data, 'data');
+    console.log(this.product, 'data');
   }
 
   public onNoClick(): void {
     this.dialogRef.close();
   }
 
-  public save(): void {
-    
+  public removePrice(index: number): void {
+    this.product.price.splice(index, 1);
+  }
+
+  public addPricea(): void {
+    this.product.price.push({variant: '', value: 0});
   }
 
 }

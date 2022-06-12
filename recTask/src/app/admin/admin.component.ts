@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Product } from '../models/product.model';
 import { AdminService } from './service/admin.service';
 
@@ -8,32 +9,43 @@ import { AdminService } from './service/admin.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  private subs: Subscription[] = []
   public products: Product[] = [];
   public displayedColumns: string[] = ['id', 'name', 'type', 'action',];
-  public dataLoaded = false;
 
-  constructor(private adminService: AdminService ) { }
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
     this.getData();
   }
 
-  private getData(): void {
-    this.adminService.loadProductData().subscribe((productsData: Product[]) => {
-      this.products = productsData;
-      this.dataLoaded = true;
-    });
+  ngOnDestroy(): void {
+    this.subs.filter(sub => sub).forEach(sub => sub.unsubscribe());
   }
 
-  public addProduct() {
+  private getData(): void {
+    this.adminService.loadProductData();
+    const productSubs = this.adminService.getProducts$.subscribe((productsData: Product[]) => {
+      this.products = productsData;
+      console.log(this.products);
+    });
+    this.subs.push(productSubs);
+  }
+
+  public addProduct(): void {
     const newProduct: Product = {
       name: '',
       desc: '',
       type: '',
-      price: [],
+      price: [
+        { variant: '', value: 0 }
+      ],
       imgUrl: ''
     };
-    
     this.adminService.openAddEditModal(newProduct);
+  }
+
+  public ediProduct(product: Product): void {
+    this.adminService.openAddEditModal(product);
   }
 }
