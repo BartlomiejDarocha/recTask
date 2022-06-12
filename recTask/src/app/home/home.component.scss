@@ -1,0 +1,11 @@
+.content {
+  padding-top: 15%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  .contentBox {
+    cursor: pointer;
+    width: 50%;
+    padding: 20px;
+  }
+}

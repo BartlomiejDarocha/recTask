@@ -2,47 +2,27 @@
   "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Buty 1",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
+      "imgUrl": "",
+      "type": "boots",
+      "price": "[]"
     },
     {
       "id": 2,
-      "title": "aaaaa",
-      "author": "men1"
+      "name": "Buty 2",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
+      "imgUrl": "",
+      "type": "boots",
+      "price": "[]"
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "title": "abc",
-      "author": "fsfsfsaaffs",
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "title": "fsfadsfasf",
-      "author": "fsfsfsaffs",
-      "id": 7
-    },
-    {
-      "title": "fsfadsfasf",
-      "author": "fsfsfsaffs",
-      "id": 8
-    },
-    {
-      "title": "abc",
-      "author": "fsfsfsaaffs",
-      "id": 10
-    },
-    {
-      "title": "abc",
-      "author": "fsfsfsaaffs",
-      "id": 11
+      "id": 3,
+      "name": "Buty 3",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
+      "imgUrl": "",
+      "type": "boots",
+      "price": "[]"
     }
   ]
 }
