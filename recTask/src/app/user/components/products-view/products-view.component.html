@@ -1,0 +1,20 @@
+<div class="content">
+  <h1>Lista produktów</h1>
+  <div class="product-wrapper" *ngFor="let product of products let i=index">
+    <mat-card>
+      <mat-card-title>{{product.name}}</mat-card-title>
+      <div class="photo-wapper">
+        <img [src]="product.imgUrl">
+      </div>
+      <mat-card-content>
+        <p>Typ: {{product.type}}</p>
+        <div>Ceny:</div>
+        <div *ngFor="let price of product.price">
+          <span>{{price.variant}}: {{price.value}} zł</span>
+        </div>
+        <div>Opis:</div>
+        <p [innerText]="product.desc"></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

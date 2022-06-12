@@ -1,0 +1,14 @@
+.content {
+  padding: 5%;
+  .product-wrapper {
+    margin-top: 10px;
+    .photo-wapper {
+      padding: 10px;
+      img {
+        height: 300px;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
