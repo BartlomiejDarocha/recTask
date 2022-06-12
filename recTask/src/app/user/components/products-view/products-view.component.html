@@ -13,7 +13,10 @@
           <span>{{price.variant}}: {{price.value}} zł</span>
         </div>
         <div>Opis:</div>
-        <p [innerText]="product.desc"></p>
+        <p>
+          <span [innerText]="product.desc | showMore: !!product.showMore"></span>
+          <span class="show-more" (click)="showMore(i)" *ngIf="product.desc.length > 120 && !product.showMore">...</span>
+        </p>
       </mat-card-content>
     </mat-card>
   </div>

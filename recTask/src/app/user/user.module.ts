@@ -6,13 +6,15 @@ import { ProductListService } from './services/product-list.service';
 import { UserRoutingModule } from './user-routing.module';
 import { MaterialModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
+import { ShowMorePipe } from './pipes/show-more.pipe';
 
 
 
 @NgModule({
   declarations: [
     ProductsViewComponent,
-    ProductsSearcherComponent
+    ProductsSearcherComponent,
+    ShowMorePipe
   ],
   imports: [
     CommonModule,

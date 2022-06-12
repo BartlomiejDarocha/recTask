@@ -5,6 +5,7 @@ export interface Product {
   imgUrl: string;
   type: 'namioty' | 'kurtki' | 'buty'| '';
   price: productsPrice[];
+  showMore?: boolean;
 }
 
 export interface productsPrice {

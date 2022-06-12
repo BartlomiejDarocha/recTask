@@ -30,4 +30,8 @@ export class ProductsViewComponent implements OnInit {
     this.subs.push(productSubs);
   }
 
+  public showMore(i: number):void {
+    this.products[i].showMore = true;
+  }
+
 }
