@@ -1,1 +1,20 @@
-<p>add-product-modal works!</p>
+<h1 mat-dialog-title>Dodaj produkt</h1>
+<form #productForm="ngForm" (submit)="save()" class="example-form">
+  <div mat-dialog-content>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nazwa</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button type="button" (click)="onNoClick()">Anuluj</button>
+    <button mat-button type="submit" [mat-dialog-close]="data" cdkFocusInitial>Zapisz</button>
+  </div>
+</form>
+
+

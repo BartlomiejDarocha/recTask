@@ -9,12 +9,31 @@ import { AdminService } from './service/admin.service';
 })
 export class AdminComponent implements OnInit {
   public products: Product[] = [];
-  displayedColumns: string[] = ['id', 'name', 'type', 'action'];
+  public displayedColumns: string[] = ['id', 'name', 'type', 'action',];
+  public dataLoaded = false;
 
   constructor(private adminService: AdminService ) { }
 
   ngOnInit(): void {
-    this.adminService.loadProductData();
-    this.products = this.adminService.getProducts;
+    this.getData();
+  }
+
+  private getData(): void {
+    this.adminService.loadProductData().subscribe((productsData: Product[]) => {
+      this.products = productsData;
+      this.dataLoaded = true;
+    });
+  }
+
+  public addProduct() {
+    const newProduct: Product = {
+      name: '',
+      desc: '',
+      type: '',
+      price: [],
+      imgUrl: ''
+    };
+    
+    this.adminService.openAddEditModal(newProduct);
   }
 }

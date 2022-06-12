@@ -6,6 +6,7 @@ import { AdminComponent } from './admin.component';
 import { AdminService } from './service/admin.service';
 import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from '../material.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,6 +18,7 @@ import { MaterialModule } from '../material.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MaterialModule,
     AdminRoutingModule
   ],

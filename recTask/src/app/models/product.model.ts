@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   desc: string;
   imgUrl: string;
-  type: 'tent' | 'jacket' | 'boots'
+  type: 'tent' | 'jacket' | 'boots'| '';
   price: productsPrice[];
 }
 
