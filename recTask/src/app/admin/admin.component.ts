@@ -46,6 +46,7 @@ export class AdminComponent implements OnInit {
   }
 
   public ediProduct(product: Product): void {
-    this.adminService.openAddEditModal(product);
+    console.log(product, 'product Edit');
+    this.adminService.openAddEditModal({...product});
   }
 }

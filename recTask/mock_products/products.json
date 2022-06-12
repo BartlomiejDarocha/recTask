@@ -2,13 +2,13 @@
   "products": [
     {
       "id": 1,
-      "name": "Buty 1",
+      "name": "Buty 65",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
-      "imgUrl": "",
+      "imgUrl": "fdsdsafsafasfd",
       "type": "buty",
       "price": [
         {
-          "variant": "wariant 1", 
+          "variant": "wariant 1",
           "value": "0"
         }
       ]
@@ -21,7 +21,7 @@
       "type": "buty",
       "price": [
         {
-          "variant": "wariant 1", 
+          "variant": "wariant 1",
           "value": "0"
         }
       ]
@@ -34,7 +34,7 @@
       "type": "buty",
       "price": [
         {
-          "variant": "wariant 1", 
+          "variant": "wariant 1",
           "value": "0"
         }
       ]
