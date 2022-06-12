@@ -12,8 +12,6 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   private dataToSend(data: any): string {
-    console.log(data, 'data')
-    console.log(JSON.stringify(data),'body stringfly 2');
     return JSON.stringify(data);
   }
 

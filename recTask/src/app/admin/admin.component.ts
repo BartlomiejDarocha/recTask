@@ -27,7 +27,6 @@ export class AdminComponent implements OnInit {
     this.adminService.loadProductData();
     const productSubs = this.adminService.getProducts$.subscribe((productsData: Product[]) => {
       this.products = productsData;
-      console.log(this.products);
     });
     this.subs.push(productSubs);
   }
@@ -46,7 +45,10 @@ export class AdminComponent implements OnInit {
   }
 
   public ediProduct(product: Product): void {
-    console.log(product, 'product Edit');
     this.adminService.openAddEditModal({...product});
+  }
+
+  public deleteProduct(product: Product): void {
+    this.adminService.deleteProduct({...product});
   }
 }

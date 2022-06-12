@@ -14,7 +14,6 @@ export class InterceptorService implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {    
     this.loaderService.show();
-    console.log('intercerpt works');
     request = request.clone({ headers: this.headers });
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {

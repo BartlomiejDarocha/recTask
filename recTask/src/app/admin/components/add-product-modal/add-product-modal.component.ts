@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from 'src/app/models/product.model';
 
@@ -7,17 +7,13 @@ import { Product } from 'src/app/models/product.model';
   templateUrl: './add-product-modal.component.html',
   styleUrls: ['./add-product-modal.component.scss']
 })
-export class AddProductModalComponent implements OnInit {
+export class AddProductModalComponent {
   public productTypes = [ 'namioty' , 'kurtki', 'buty']; 
 
   constructor(
     public dialogRef: MatDialogRef<AddProductModalComponent>,
     @Inject(MAT_DIALOG_DATA) public product: Product,
   ) {}
-
-  ngOnInit(): void {
-    console.log(this.product, 'data');
-  }
 
   public onNoClick(): void {
     this.dialogRef.close();

@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Buty 65",
+      "name": "Buty 99",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tellus magna. Suspendisse sit amet lectus massa. Aenean imperdiet quam vel placerat convallis. Sed semper vitae nisi at ultrices. Nulla ac mollis nibh. Sed quis urna eu tellus egestas iaculis. Cras lectus neque, imperdiet quis finibus vitae, pharetra at ex. Curabitur sed diam nisl. ",
       "imgUrl": "fdsdsafsafasfd",
       "type": "buty",
@@ -38,6 +38,19 @@
           "value": "0"
         }
       ]
+    },
+    {
+      "name": "buty 100",
+      "desc": "fadsfsafasfasfasfasfasfasfasfasfasfadsfsafasfasfasfasfasfasfasfasfasfadsfsafasfasfasfasfasfasfasfasfasfadsfsafasfasfasfasfasfasfasfasfas",
+      "type": "namioty",
+      "price": [
+        {
+          "variant": "nowy Wariant",
+          "value": 11
+        }
+      ],
+      "imgUrl": "fdsfaffsaf",
+      "id": 4
     }
   ]
 }
