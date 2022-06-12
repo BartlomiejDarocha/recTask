@@ -19,4 +19,10 @@ export class ProductListService {
     });
   }
 
+  public productGetByPhrase(phrase: string): void {
+    this.apiService.get('products', { params: {q: phrase}}).subscribe((dataProducts: Product[]) => {
+      this.products$.next(dataProducts);
+    });
+  }
+
 }

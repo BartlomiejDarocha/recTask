@@ -1,1 +1,7 @@
-<p>products-searcher works!</p>
+<mat-card>
+  <mat-card-title>Wyszukiwarka</mat-card-title>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Wpisz fraze</mat-label>
+      <input (keyup)="inputChange($event)" matInput example-full-width>
+    </mat-form-field>
+</mat-card>

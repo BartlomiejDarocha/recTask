@@ -19,10 +19,6 @@ export class ApiService {
     return this.httpClient.get(`${this.apiUrl + url}`, {params: options.params});
   }
 
-  public getWithHttpParams(url: string, params: any): Observable<any> {
-    return this.httpClient.get(`${this.apiUrl + url}`, { params });
-  }
-
   public post(url: string, body: any, options = {params: {}}): Observable<any> {
     return this.httpClient.post(`${this.apiUrl + url}`, this.dataToSend(body), {params: options.params});
   }
